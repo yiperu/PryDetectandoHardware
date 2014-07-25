@@ -28,6 +28,42 @@
 
 - (IBAction)btnDetectCamara:(id)sender {
     
+    BOOL cameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    BOOL frontCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerCameraDeviceFront];
     
+    if (cameraAvailable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera"
+                                                        message:@"Camara Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera"
+                                                        message:@"Camara NOT Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    if (frontCameraAvailable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera"
+                                                        message:@"Front Camera Available"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera"
+                                                        message:@"Front Camera NOT Available"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        
+        [alert show];
+    }
 }
+    
 @end
