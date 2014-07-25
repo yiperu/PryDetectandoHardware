@@ -145,5 +145,35 @@
     }
     return YES;
 }
+
+- (BOOL) isGyroscopeAvailable
+{
+#ifdef __IPHONE_4_0
+    CMMotionManager *motionManager = [[CMMotionManager alloc] init];
+    BOOL gyroscopeAvailable = motionManager.gyroAvailable;
+    return gyroscopeAvailable;
+#else
+    return NO;
+#endif
+}
+
+- (IBAction)btnDetectandoGiroscopio:(id)sender {
+    
+    if ([self isGyroscopeAvailable]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gyroscope"
+                                                        message:@"Gyroscope Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gyroscope"
+                                                        message:@"Gyroscope NOT Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
     
 @end

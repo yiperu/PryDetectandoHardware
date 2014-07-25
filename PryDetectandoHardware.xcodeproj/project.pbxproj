@@ -24,6 +24,7 @@
 		1E6D499E1981FCBC0079BE50 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D499D1981FCBC0079BE50 /* CoreLocation.framework */; };
 		1E6D49A0198200280079BE50 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D499F198200280079BE50 /* AVFoundation.framework */; };
 		1E6D49A2198203750079BE50 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D49A1198203750079BE50 /* MobileCoreServices.framework */; };
+		1E6D49A4198208BF0079BE50 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D49A3198208BF0079BE50 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1E6D499D1981FCBC0079BE50 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1E6D499F198200280079BE50 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1E6D49A1198203750079BE50 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1E6D49A3198208BF0079BE50 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6D49A4198208BF0079BE50 /* CoreMotion.framework in Frameworks */,
 				1E6D49A2198203750079BE50 /* MobileCoreServices.framework in Frameworks */,
 				1E6D49A0198200280079BE50 /* AVFoundation.framework in Frameworks */,
 				1E6D499E1981FCBC0079BE50 /* CoreLocation.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		1E6D49671981F60B0079BE50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E6D49A3198208BF0079BE50 /* CoreMotion.framework */,
 				1E6D49A1198203750079BE50 /* MobileCoreServices.framework */,
 				1E6D499F198200280079BE50 /* AVFoundation.framework */,
 				1E6D499D1981FCBC0079BE50 /* CoreLocation.framework */,
