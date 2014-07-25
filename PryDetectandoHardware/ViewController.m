@@ -28,7 +28,7 @@
 
 - (IBAction)btnDetectCamara:(id)sender {
     
-    BOOL cameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    BOOL cameraAvailable =      [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
     BOOL frontCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerCameraDeviceFront];
     
     if (cameraAvailable) {
@@ -64,6 +64,28 @@
         
         [alert show];
     }
+}
+
+- (IBAction)btnDetectandoMagnetometro:(id)sender {
+    BOOL magnetometerAvailable = [CLLocationManager headingAvailable];
+    if (magnetometerAvailable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Magnetometer"
+                                                        message:@"Magnetometer Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Magnetometer"
+                                                        message:@"Magnetometer NOT Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    
+    
 }
     
 @end

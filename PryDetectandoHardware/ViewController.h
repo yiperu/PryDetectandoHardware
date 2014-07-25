@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnDetectandoCamara;
@@ -14,6 +16,7 @@
 - (IBAction)btnDetectCamara:(id)sender;
 
 
+- (IBAction)btnDetectandoMagnetometro:(id)sender;
 
 
 
