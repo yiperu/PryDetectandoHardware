@@ -87,5 +87,63 @@
     
     
 }
+
+- (IBAction)btnDetectandoAudio:(id)sender {
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    BOOL audioAvailable = audioSession.inputIsAvailable;
+    
+    if (audioAvailable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Audio"
+                                                        message:@"Audio Available"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Audio"
+                                                        message:@"Audio NOT Available"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    
+    
+    
+}
+
+- (IBAction)btnVideoCapture:(id)sender {
+    // Verificando Soporte de Video
+    if ([self isVideoCameraAvailable]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Video"
+                                                        message:@"Soporte de Video Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Video"
+                                                        message:@"Soporte de Video NOT Disponible"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    
+}
+
+- (BOOL) isVideoCameraAvailable
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    NSArray *sourceTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
+    
+    if (![sourceTypes containsObject:(NSString *)kUTTypeMovie]){
+        return NO;
+    }
+    return YES;
+}
     
 @end

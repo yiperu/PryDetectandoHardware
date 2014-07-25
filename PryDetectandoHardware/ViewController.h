@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 
 
 @interface ViewController : UIViewController
@@ -18,6 +20,11 @@
 
 - (IBAction)btnDetectandoMagnetometro:(id)sender;
 
+- (IBAction)btnDetectandoAudio:(id)sender;
 
+
+- (IBAction)btnVideoCapture:(id)sender;
+// Metodo que vera si mi media esta disponible
+- (BOOL) isVideoCameraAvailable;
 
 @end
